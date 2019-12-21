@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            background: url(./images/bg.jpg) 0  0;
+
+            background-size: cover;
+
+        }
+        .bgBox{
+            width: 400px;
+            height: 450px;
+            right: 0;left: 0;
+            top: 0;bottom: 0;
+            position: absolute;
+            margin:  auto;
+            overflow: hidden;
+        }
+        .box{
+            width: 400px;
+            height: 450px;
+            background: #fff;
+            right: 0;left: 0;
+            top: 0;bottom: 0;
+            position: absolute;
+            margin:  auto;
+            opacity: 0.8;
+            border-radius: 20px;
+            float: left;
+
+        }
+        .form-group{
+            width: 300px;
+            height: 80px;
+            margin: 10px auto;
+        }
+        .btnBox1{
+            width: 400px;
+            position: relative;
+            margin: 50px auto;
+        }
+        .btn{
+            margin: 0 60px;
+            position: absolute;
+        }
+        .btn2{
+            margin-left: 80px;
+        }
+
+        .btn3{
+            margin-left: 260px;
+        }
+
+        .c1{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .btn:hover{
+            background: #28a745;
+        }
+        .box1{
+            width: 400px;
+            height: 450px;
+            background: #fff;
+            right: 0;left: 0;
+            top: 0;bottom: 0;
+            position: absolute;
+            margin:  auto;
+            opacity: 1;
+            border-radius: 20px;
+            transform: translateX(400px);
+
+
+        }
+        .re1{
+            display: block;
+            margin: 0 180px ;
+        }
+    </style>
+</head>
+<body>
+<section class="bgBox">
+<div class="box">
+    <form>
+        <h1 class="text-center"><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+        <small class="c1">------请使用用户名登录------</small>
+        <div class="form-group">
+            <label for="exampleInputEmail1">用户名:</label>
+            <input type="email" class="form-control cn1" id="exampleInputEmail1" autocomplete="off">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">密 码:</label>
+            <input type="text" class="form-control cn2" id="exampleInputPassword1" autocomplete="off">
+        </div>
+        <div class="btnBox1">
+            <button type="button" class="btn btn-primary btn2">登录</button>
+            <button type="button" class="btn btn-primary btn3">注册</button>
+        </div>
+    </form>
+
+</div>
+
+<div class="box1">
+    <form>
+        <h1 class="text-center"><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+        <small class="c1">------请你注册------</small>
+        <div class="form-group">
+            <label for="exampleInputEmail2">用户名:</label>
+            <input type="email" class="form-control cn" id="exampleInputEmail2" autocomplete="off">
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword12">密 码:</label>
+            <input type="text" class="form-control cn3" id="exampleInputPassword12" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword2">确 认 密 码:</label>
+            <input type="text" class="form-control cn4" id="exampleInputPassword2" autocomplete="off">
+        </div>
+
+        <button type="button" class="btn btn-primary re1">注册</button>
+    </form>
+
+</div>
+</section>
+
+<script src="js/ajax.js?a=255"></script>
+<script src="js/re.js?a=23"></script>
+<script src="js/login.js"></script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+
+
+<script>
+    var oBtn = $('.btn3');
+    var oBox1 = $('.box1');
+    var oBox2 = $('.box');
+
+    oBtn.click(function () {
+        move();
+
+    })
+    function move() {
+        oBox1.animate({
+            left : '-800px'
+        },200);
+        oBox2.animate({
+            left : '-800px'
+        },200)
+
+    }
+
+
+</script>
+
+<script>
+    reR();
+</script>
+
+</body>
+</html>

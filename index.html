@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cc{
+            width: 80%;
+            margin-left: 50px;
+        }
+        .btn{
+            margin: 20px auto;
+        }
+        td{
+            font-size: 16px;
+            text-align: center;
+            color: #0b2e13;
+
+        }
+        tr:nth-child(odd){
+            background: #17a2b8;
+        }
+        .table .cn{
+            background: #c69500;
+        }
+        .table{
+            width: 90%;
+            margin-left: 50px;
+        }
+
+        th:nth-child(1),
+        th:nth-child(2),
+        th:nth-child(4),
+        th:nth-child(5) {
+            width: 14%;
+        }
+
+        th:nth-child(6) {
+            width: 20%
+        }
+
+        .cd1{
+            width: 80%;
+            margin: 10px;
+        }
+        .table .btn{
+            margin: 0;
+
+        }
+        .box{
+            width: 402px;
+            height: 50px;
+            position: relative;
+            float: right;
+            margin:0 125px 50px ;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .box .sar{
+            width: 100px;
+            height: 50px;
+            float: left;
+            border-radius: 0;
+
+        }
+        .box .txt{
+            width: 200px;
+            height: 50px;
+            float: left;
+
+        }
+        .box .searchBtn{
+            width: 100px;
+            height: 50px;
+            float: left;
+            background: #7abaff;
+            cursor: pointer;
+            /*border:1px solid #a71d2a ;*/
+        }
+    </style>
+</head>
+<body>
+<div class="cc">
+<h1><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">+添加学生信息</button>
+</div>
+
+<!--模糊搜索-->
+<div class="box">
+<select class="custom-select sar" >
+    <option selected value="stuid">学号</option>
+    <option value="stuname">姓名</option>
+    <option value="stuage">年龄</option>
+    <option value="stumajor">专业</option>
+</select>
+<input type="text" class="txt">
+<button class="searchBtn">搜索</button>
+</div>
+
+<table class="table text-center">
+    <thead>
+    <tr class="cn ">
+        <th scope="col">编号</th>
+        <th scope="col">学号</th>
+        <th scope="col">姓名</th>
+        <th scope="col">年龄</th>
+        <th scope="col">性别</th>
+        <th scope="col">专业</th>
+        <th scope="col">操作</th>
+    </tr>
+    </thead>
+    <tbody class="dataBody">
+<!--    <tr>-->
+<!--        <th scope="row">1</th>-->
+<!--        <td>173055</td>-->
+<!--        <td>老掰</td>-->
+<!--        <td>20</td>-->
+<!--        <td>男</td>-->
+<!--        <td>软件技术</td>-->
+<!--        <td><button type="button" class="btn btn-success btn-warning btn-sm btn-primary"  data-toggle="modal" data-target="#exampleModal1">修改</button>-->
+<!--            <button type="button" class="btn btn-danger btn-sm btn-primary">删除</button></td>-->
+<!--    </tr>-->
+
+    </tbody>
+</table>
+<!--添加学生信息-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">添加学生信息</h5>
+                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div>
+                        <lable>学号:</lable>
+                        <input type="text" class="cd1 form-control addId">
+                    </div>
+                    <div>
+                        <lable>姓名:</lable>
+                        <input type="text" class="cd1 form-control addName" >
+                    </div>
+                    <div>
+                        <lable>年龄:</lable>
+                        <input type="text" class="cd1 form-control addAge">
+                    </div>
+                    <div>
+                        <lable>性别:</lable>
+                        <input type="text" class="cd1 form-control addSex">
+                    </div>
+                    <div>
+                        <lable>专业:</lable>
+                        <input type="text" class="cd1 form-control addMajor">
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary addStu">确认添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改学生信息-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">修改学生信息</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div>
+                        <lable>学号:</lable>
+                        <input type="text" class="cd1 form-control upId">
+                    </div>
+                    <div>
+                        <lable>姓名:</lable>
+                        <input type="text" class="cd1 form-control upName">
+                    </div>
+                    <div>
+                        <lable>年龄:</lable>
+                        <input type="text" class="cd1 form-control upAge">
+                    </div>
+                    <div>
+                        <lable>性别:</lable>
+                        <input type="text" class="cd1 form-control upSex">
+                    </div>
+                    <div>
+                        <lable>专业:</lable>
+                        <input type="text" class="cd1 form-control upMajor">
+                    </div>
+                    <input type="hidden" class="getId">
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary upBtn">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--引入-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/randedData.js?a=555"></script>
+<script src="js/ajax.js"></script>
+<script src="js/die.js"></script>
+<script src="js/addStu.js?a=1"></script>
+<script src="js/search.js"></script>
+<script src="js/upDataGet.js"></script>
+<script src="js/updata.js?a=23"></script>
+
+<script>
+    ranDer();
+    addStu();
+    upData();
+    dieRe();
+</script>
+</body>
+</html>
